@@ -1,8 +1,11 @@
 import express from "express";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const appServer = express();
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 // This is a list of books that we want to return once the end point is hit.
 const data = [
